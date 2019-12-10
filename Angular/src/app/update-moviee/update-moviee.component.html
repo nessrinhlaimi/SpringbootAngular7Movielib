@@ -1,0 +1,24 @@
+<h2 class="text-center">UpdateMovie</h2>
+
+<form  [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+  <label for="title">Title : </label>
+  <input formControlName="title" placeholder="Title" name="title" class="form-control" id="title">
+  </div>
+
+  <div class="form-group">
+  <label for="director">Title : </label>
+  <input formControlName="director" placeholder="director" name="director" class="form-control" id="director">
+</div>
+
+<div class="form-group">
+  <label for="releaseDate">Release Date : </label>
+  <input type="date" formControlName="releaseDate" placeholder="ReleaseDate" class="form-control" name="releaseDate" id="releaseDate">
+</div>
+  <div class="form-group">
+  <label for="type">Type : </label>
+  <input formControlName="type" placeholder="Type" name="type" class="form-control" id="type">
+</div>
+
+  <button class="btn btn-success">UpdateMovie</button>
+</form>

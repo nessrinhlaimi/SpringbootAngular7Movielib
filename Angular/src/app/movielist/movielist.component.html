@@ -1,0 +1,32 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1>Moviees</h1>
+  </div>
+  <div class="panel-body">
+    <input type="text" placeholder="Search By Title" [(ngModel)]="searchTermByTitle" />
+    <input type="text" placeholder="Search By Director" [(ngModel)]="searchTermByDirector" />
+<input type="date" placeholder="Search By Release Date" [(ngModel)]="searchTermByReleaseDate" />
+<input type="text" placeholder="Search By Type" [(ngModel)]="searchTermByType" />
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Director</th>
+          <th>releaseDate</th>
+          <th>Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let moviee of moviees">
+          <td>{{moviee.title}}</td>
+          <td>{{moviee.director}}</td>
+          <td>{{moviee.releaseDate}}</td>
+          <td>{{moviee.type}}</td>
+          <td><button (click)="deleteMovie(moviee)">Delete</button>
+        <button (click)="updateMovie(moviee)"class="btn btn-info" style="margin-left: 10px">Update</button>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
